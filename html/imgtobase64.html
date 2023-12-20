@@ -12,20 +12,22 @@
   </head>
   <body>
     <div id="body-div">
-      <div id="container">
+      <div id="inicio">
+        <label onclick="inicio()" id="link-button">Página Principal</label>
+      </div>
+      <div id="items">
         <h1>Conversor IMG a Base64</h1>
         <label for="image-input" id="select-button">Seleccionar Imágen</label>
         <input type="file" id="image-input" accept="image/*" />
         <textarea id="base64-output" rows="4" cols="50" readonly></textarea>
         <label id="copy-button">Copiar al Portapapeles</label>
-        <script src="../javascript/imgtobase64.js"></script>
       </div>
-      <div id="reverse-container">
+      <div id="items">
         <h1>Conversor Base64 a IMG</h1>
         <textarea id="base64-input" rows="4" cols="50"></textarea>
         <label id="download-button">Descargar Imágen</label>
-        <script src="../javascript/imgtobase64.js"></script>
       </div>
     </div>
+    <script src="../javascript/imgtobase64.js"></script>
   </body>
 </html>

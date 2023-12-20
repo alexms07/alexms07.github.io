@@ -1,3 +1,7 @@
+function inicio() {
+  window.location.href = "../index.html";
+}
+
 document
   .getElementById("image-input")
   .addEventListener("change", function (event) {

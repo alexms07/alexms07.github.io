@@ -4,11 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow"
+    />
     <title>Webs Útiles</title>
   </head>
   <body>
-    <h1>Recopilación de utilidades que suelo necesitar en el día a día</h1>
-    <h2>Conversor de imágenes a Base64</h2>
-    <a href="html/imgtobase64.html">IMG to BASE64</a>
+    <div id="body-div">
+      <div id="inicio">
+        <h1>Recopilación de utilidades que suelo necesitar en el día a día</h1>
+      </div>
+      <div id="items">
+        <h2>Conversor Imágenes - Base64</h2>
+        <label onclick="abrirPagina('imgtobase64')" id="link-button"
+          >IMG to BASE64</label
+        >
+      </div>
+      <div id="items">
+        <h2>Verificador Integridad - MD5</h2>
+        <label onclick="abrirPagina('validadormd5')" id="link-button"
+          >Validador MD5</label
+        >
+      </div>
+    </div>
+    <script src="javascript/index.js"></script>
   </body>
 </html>
