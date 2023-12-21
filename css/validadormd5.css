@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Rubik Doodle Shadow", sans-serif;
+  text-align: center;
+  background-color: #9e769b;
+}
+
+#body-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+#inicio {
+  grid-column: span 2;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000000bb;
+  background-color: #b9b9b9;
+}
+
+#link-button {
+  display: inline-flex;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Rubik Doodle Shadow", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #d3d3d3;
+  box-shadow: 0 0 10px #000000bb;
+  border-radius: 10px;
+}

@@ -3,7 +3,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   font-family: "Rubik Doodle Shadow", sans-serif;
   text-align: center;
   background-color: #b9b9b9;
@@ -15,34 +15,25 @@ body {
   align-items: center;
 }
 
-#inicio {
-  margin: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #000000bb;
+.common-style {
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0 0 2em #000000bb;
   background-color: #b9b9b9;
 }
 
-#items {
-  display: inline-flex;
-  gap: 50px;
-  margin: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #000000bb;
-  background-color: #b9b9b9;
+.item {
+  display: flex;
+  gap: 2em;
 }
 
-#link-button {
-  display: inline-flex;
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
+.link-button {
+  padding: 0em 1em;
   font-family: "Rubik Doodle Shadow", sans-serif;
   text-align: center;
-  font-weight: bold;
   cursor: pointer;
   background-color: #d3d3d3;
-  box-shadow: 0 0 10px #000000bb;
-  border-radius: 10px;
+  box-shadow: 0 0 2em #000000bb;
+  border-radius: 0.6em;
 }
