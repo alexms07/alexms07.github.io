@@ -24,7 +24,7 @@ body {
   background-color: #b9b9b9;
 }
 
-#link-button {
+.link-button {
   display: inline-flex;
   margin: 10px;
   padding: 10px 20px;
