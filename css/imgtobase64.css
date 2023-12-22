@@ -3,7 +3,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   font-family: "Rubik Doodle Shadow", sans-serif;
   text-align: center;
   background-color: #9e769b;
@@ -15,21 +15,23 @@ body {
   gap: 0.5em;
 }
 
-#inicio {
+.common-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5em;
+  padding: 1em;
+  gap: 0.7em;
+  border-radius: 1em;
+  box-shadow: 0 0 2em #000000bb;
+}
+
+.inicio {
   grid-column: span 2;
-  margin: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #000000bb;
   background-color: #b9b9b9;
 }
 
-#items {
-  margin: 10px;
-  max-width: 500px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #000000bb;
+.item {
   background-color: #9c6798;
 }
 
@@ -37,27 +39,22 @@ body {
   display: none;
 }
 
-#select-button,
-#copy-button,
-#download-button,
-#link-button {
-  display: inline-flex;
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
+.select-button,
+.copy-button,
+.download-button,
+.link-button {
+  padding: 0em 1em;
   font-family: "Rubik Doodle Shadow", sans-serif;
   text-align: center;
-  font-weight: bold;
   cursor: pointer;
   background-color: #d3d3d3;
-  box-shadow: 0 0 10px #000000bb;
-  border-radius: 10px;
+  box-shadow: 0 0 2em #000000bb;
+  border-radius: 0.6em;
 }
 
 textarea {
-  width: 100%;
-  padding: 10px;
+  padding: 1em;
   box-sizing: border-box;
-  border: 2px solid #ad31a3;
-  border-radius: 5px;
+  border: 0.3em solid #ad31a3;
+  border-radius: 0.6em;
 }
