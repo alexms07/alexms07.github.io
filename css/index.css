@@ -1,39 +1,51 @@
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0 auto;
+  width: fit-content;
+  margin: auto;
   font-family: "Rubik Doodle Shadow", sans-serif;
   text-align: center;
   background-color: #b9b9b9;
 }
 
-#body-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .common-style {
-  margin: 0.5em;
   padding: 1em;
   border-radius: 1em;
   box-shadow: 0 0 2em #000000bb;
   background-color: #b9b9b9;
 }
 
-.item {
-  display: flex;
-  gap: 2em;
-}
-
 .link-button {
-  padding: 0em 1em;
-  font-family: "Rubik Doodle Shadow", sans-serif;
-  text-align: center;
   cursor: pointer;
   background-color: #d3d3d3;
   box-shadow: 0 0 2em #000000bb;
-  border-radius: 0.6em;
+  border-radius: 1em;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+/* Estilos para pantallas con un minimo de 601px de ancho */
+@media only screen and (min-width: 601px) {
+  #body-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1em;
+    gap: 1em;
+  }
+
+  .inicio {
+    grid-column: 2 span;
+  }
+}
+
+/* Estilos para pantallas con un maximo de 600px de ancho */
+@media only screen and (max-width: 600px) {
+  #body-div {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    gap: 1em;
+  }
 }
