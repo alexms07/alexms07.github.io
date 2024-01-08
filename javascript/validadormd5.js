@@ -38,3 +38,25 @@ document.getElementById("copy-button").addEventListener("click", function () {
     .then(() => alert("¡Texto copiado al portapapeles!"))
     .catch((err) => console.error("Error al copiar al portapapeles:", err));
 });
+
+document
+  .getElementById("compare-button")
+  .addEventListener("click", function () {
+    const md5Output = document.getElementById("hashmd5-output");
+    const md5Input = document.getElementById("hashmd5-input");
+    if (!md5Input.value || !md5Output.value) {
+      if (!md5Input.value && !md5Output.value) {
+        alert("No has completado ninguno de los campos");
+      } else if (!md5Input.value) {
+        alert("No has rellenado el valor hash MD5 a comparar");
+      } else {
+        alert("No has seleccionado el fichero para extraer su hash MD5");
+      }
+    } else {
+      if (md5Input.value == md5Output.value) {
+        alert("El hash MD5 coincide");
+      } else {
+        alert("El hash MD5 no coincide");
+      }
+    }
+  });
