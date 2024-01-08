@@ -4,12 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/validadormd5.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
     <title>Validador MD5</title>
   </head>
   <body>
     <div id="body-div">
-      <div id="inicio">
-        <label onclick="inicio()" class="link-button">Página Principal</label>
+      <div class="inicio item common-style">
+        <label onclick="inicio()" id="link-button"
+          ><h2>Página Principal</h2></label
+        >
+      </div>
+      <div class="item common-style">
+        <h1>Comprobación Hash MD5</h1>
+        <input type="file" id="file-input" />
+        <label for="file-input" id="select-button"
+          ><h2>Seleccionar Fichero</h2></label
+        >
+        <textarea id="hashmd5-output" rows="4" cols="50" readonly></textarea>
+        <label id="copy-button"><h2>Copiar Hash MD5</h2></label>
       </div>
     </div>
     <script src="../javascript/validadormd5.js"></script>
