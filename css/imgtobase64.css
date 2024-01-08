@@ -12,10 +12,10 @@ body {
   box-shadow: 0 0 2em #000000bb;
 }
 
-.select-button,
-.copy-button,
-.download-button,
-.link-button {
+#select-button,
+#copy-button,
+#download-button,
+#link-button {
   cursor: pointer;
   background-color: #d3d3d3;
   box-shadow: 0 0 2em #000000bb;
