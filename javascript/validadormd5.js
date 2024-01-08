@@ -2,6 +2,15 @@ function inicio() {
   window.location.href = "../index.html";
 }
 
+function limpiar() {
+  const md5Output = document.getElementById("hashmd5-output");
+  const md5Input = document.getElementById("hashmd5-input");
+  const file = document.getElementById("file-input");
+  md5Output.value = "";
+  md5Input.value = "";
+  file.value = "";
+}
+
 document
   .getElementById("file-input")
   .addEventListener("change", function (event) {
@@ -12,19 +21,25 @@ document
       const reader = new FileReader();
 
       reader.onload = function (e) {
+        // Obtiene el contenido del archivo como un ArrayBuffer
         const arrayBuffer = e.target.result;
-        const binaryString = String.fromCharCode.apply(
-          null,
-          new Uint8Array(arrayBuffer)
-        );
-        // Calcula el MD5 usando crypto-js
-        const md5Value = CryptoJS.MD5(binaryString).toString();
-        // Muestra el resultado en la página
-        const md5Output = document.getElementById("hashmd5-output");
-        md5Output.value = md5Value;
-      };
 
-      // Lee el contenido del archivo como ArrayBuffer
+        // Convierte el ArrayBuffer a un Blob
+        const blob = new Blob([arrayBuffer]);
+
+        // Lee el contenido del Blob como una cadena
+        const blobReader = new FileReader();
+        blobReader.onload = function (blobEvent) {
+          // Calcula el MD5 usando crypto-js
+          const md5Value = CryptoJS.MD5(blobEvent.target.result).toString();
+
+          // Muestra el resultado en el textarea
+          const md5Output = document.getElementById("hashmd5-output");
+          md5Output.value = md5Value;
+        };
+
+        blobReader.readAsBinaryString(blob);
+      };
       reader.readAsArrayBuffer(file);
     } else {
       alert("Selecciona un archivo primero.");

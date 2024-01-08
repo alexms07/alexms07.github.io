@@ -2,6 +2,15 @@ function inicio() {
   window.location.href = "../index.html";
 }
 
+function limpiar() {
+  const base64Output = document.getElementById("base64-output");
+  const base64Input = document.getElementById("base64-input");
+  const file = document.getElementById("image-input");
+  base64Output.value = "";
+  base64Input.value = "";
+  file.value = "";
+}
+
 document
   .getElementById("image-input")
   .addEventListener("change", function (event) {
@@ -22,10 +31,14 @@ document
 
 document.getElementById("copy-button").addEventListener("click", function () {
   const base64Output = document.getElementById("base64-output");
-  navigator.clipboard
-    .writeText(base64Output.value)
-    .then(() => alert("¡Texto copiado al portapapeles!"))
-    .catch((err) => console.error("Error al copiar al portapapeles:", err));
+  if (base64Output.value) {
+    navigator.clipboard
+      .writeText(base64Output.value)
+      .then(() => alert("¡Texto copiado al portapapeles!"))
+      .catch((err) => console.error("Error al copiar al portapapeles:", err));
+  } else {
+    alert("No has seleccionado la imágen");
+  }
 });
 
 document
@@ -35,7 +48,9 @@ document
     if (base64Input) {
       const link = document.createElement("a");
       link.href = "data:image/png;base64," + base64Input;
-      link.download = "imagen_descargada.png";
+      link.download = "Basse64IMG.png";
       link.click();
+    } else {
+      alert("No has rellenado el valor en Base64");
     }
   });
