@@ -3,14 +3,7 @@ body {
   margin: auto;
   font-family: "Rubik Doodle Shadow", sans-serif;
   text-align: center;
-  background-color: #90b7f3;
-}
-
-#body-div {
-  display: flex;
-  flex-direction: column;
-  margin: 1em;
-  gap: 1em;
+  background-color: #4a6080;
 }
 
 .common-style {
@@ -20,6 +13,7 @@ body {
 }
 
 #select-button,
+#compare-button,
 #copy-button,
 #link-button {
   cursor: pointer;
@@ -36,11 +30,33 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background-color: #85a7da;
+  background-color: #607ba5;
 }
 
 textarea {
   height: 100%;
   box-shadow: 0 0 2em #000000bb;
   border-radius: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  #body-div {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    gap: 1em;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #body-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1em;
+    gap: 1em;
+  }
+
+  .inicio {
+    grid-column: 2 span;
+  }
 }
