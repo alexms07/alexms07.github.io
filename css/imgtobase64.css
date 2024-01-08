@@ -3,7 +3,7 @@ body {
   margin: auto;
   font-family: "Rubik Doodle Shadow", sans-serif;
   text-align: center;
-  background-color: #9e769b;
+  background-color: #63485c;
 }
 
 .common-style {
@@ -14,6 +14,7 @@ body {
 
 #select-button,
 #copy-button,
+#clean-button,
 #download-button,
 #link-button {
   cursor: pointer;
@@ -30,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background-color: #9c6798;
+  background-color: #8f6784;
 }
 
 textarea {
