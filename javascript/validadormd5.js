@@ -48,10 +48,14 @@ document
 
 document.getElementById("copy-button").addEventListener("click", function () {
   const md5Output = document.getElementById("hashmd5-output");
-  navigator.clipboard
-    .writeText(md5Output.value)
-    .then(() => alert("¡Texto copiado al portapapeles!"))
-    .catch((err) => console.error("Error al copiar al portapapeles:", err));
+  if (md5Output.value) {
+    navigator.clipboard
+      .writeText(md5Output.value)
+      .then(() => alert("¡Texto copiado al portapapeles!"))
+      .catch((err) => console.error("Error al copiar al portapapeles:", err));
+  } else {
+    alert("No has seleccionado ningún fichero");
+  }
 });
 
 document

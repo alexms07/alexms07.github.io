@@ -37,7 +37,7 @@ document.getElementById("copy-button").addEventListener("click", function () {
       .then(() => alert("¡Texto copiado al portapapeles!"))
       .catch((err) => console.error("Error al copiar al portapapeles:", err));
   } else {
-    alert("No has seleccionado la imágen");
+    alert("No has seleccionado ninguna imágen");
   }
 });
 

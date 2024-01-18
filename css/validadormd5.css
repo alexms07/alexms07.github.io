@@ -1,15 +1,31 @@
+/* Paleta de colores */
+:root {
+  --color-50: #f5f7fa;
+  --color-100: #ebeef3;
+  --color-200: #d2d9e5;
+  --color-300: #abbace;
+  --color-400: #7e95b2;
+  --color-500: #5e7899;
+  --color-600: #4a6080;
+  --color-700: #3c4d68;
+  --color-800: #354257;
+  --color-900: #303a4a;
+  --color-950: #202631;
+}
+
 body {
   width: fit-content;
   margin: auto;
-  font-family: "Rubik Doodle Shadow", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   text-align: center;
-  background-color: #4a6080;
+  background-color: var(--color-50);
 }
 
 .common-style {
   padding: 1em;
   border-radius: 1em;
   box-shadow: 0 0 2em #000000bb;
+  background-color: var(--color-200);
 }
 
 #select-button,
@@ -17,8 +33,31 @@ body {
 #compare-button,
 #copy-button,
 #link-button {
+  background-color: var(--color-500);
+  color: #ffffff;
+  box-shadow: 0 0 2em #000000bb;
+  border-radius: 1em;
+}
+
+#select-button:hover,
+#clean-button:hover,
+#compare-button:hover,
+#copy-button:hover,
+#link-button:hover {
   cursor: pointer;
-  background-color: #d3d3d3;
+  background-color: var(--color-600);
+  color: #ffffff;
+  box-shadow: 0 0 2em #000000bb;
+  border-radius: 1em;
+}
+
+#select-button:active,
+#clean-button:active,
+#compare-button:active,
+#copy-button:active,
+#link-button:active {
+  background-color: var(--color-700);
+  color: #ffffffbb;
   box-shadow: 0 0 2em #000000bb;
   border-radius: 1em;
 }
@@ -31,7 +70,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background-color: #607ba5;
 }
 
 textarea {

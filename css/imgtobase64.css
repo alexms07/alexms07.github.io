@@ -1,15 +1,31 @@
+/* Paleta de colores */
+:root {
+  --color-50: #f9f6f9;
+  --color-100: #f4eff4;
+  --color-200: #eae0e9;
+  --color-300: #d9c8d7;
+  --color-400: #c1a5bd;
+  --color-500: #ab89a5;
+  --color-600: #946e8c;
+  --color-700: #7d5974;
+  --color-800: #63485c;
+  --color-900: #594253;
+  --color-950: #33242f;
+}
+
 body {
   width: fit-content;
   margin: auto;
-  font-family: "Rubik Doodle Shadow", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   text-align: center;
-  background-color: #63485c;
+  background-color: var(--color-50);
 }
 
 .common-style {
   padding: 1em;
   border-radius: 1em;
   box-shadow: 0 0 2em #000000bb;
+  background-color: var(--color-200);
 }
 
 #select-button,
@@ -17,8 +33,29 @@ body {
 #clean-button,
 #download-button,
 #link-button {
+  background-color: var(--color-500);
+  color: #ffffff;
+  box-shadow: 0 0 2em #000000bb;
+  border-radius: 1em;
+}
+
+#select-button:hover,
+#copy-button:hover,
+#clean-button:hover,
+#download-button:hover,
+#link-button:hover {
   cursor: pointer;
-  background-color: #d3d3d3;
+  background-color: var(--color-600);
+  box-shadow: 0 0 2em #000000bb;
+  border-radius: 1em;
+}
+
+#select-button:active,
+#copy-button:active,
+#clean-button:active,
+#download-button:active,
+#link-button:active {
+  background-color: var(--color-700);
   box-shadow: 0 0 2em #000000bb;
   border-radius: 1em;
 }
@@ -31,7 +68,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background-color: #8f6784;
 }
 
 textarea {
