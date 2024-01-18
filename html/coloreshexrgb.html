@@ -10,7 +10,7 @@
       type="image/png"
       sizes="180x180"
     />
-    <link rel="stylesheet" href="../css/validadormd5.css" />
+    <link rel="stylesheet" href="../css/coloreshexrgb.css" />
     <!--Fuente de Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,8 +19,7 @@
       rel="stylesheet"
     />
     <!--/Fuente de Google-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
-    <title>Validador MD5</title>
+    <title>Colores HEX y RGB</title>
   </head>
   <body>
     <div id="body-div">
@@ -30,18 +29,10 @@
         >
       </div>
       <div class="item common-style">
-        <h1>Obtener Hash MD5</h1>
-        <input type="file" id="file-input" />
-        <label for="file-input" id="select-button"
-          ><h2>Seleccionar Fichero</h2></label
-        >
-        <textarea id="hashmd5-output" rows="4" cols="50" readonly></textarea>
-        <label id="copy-button"><h2>Copiar Hash MD5</h2></label>
-      </div>
-      <div class="item common-style">
-        <h1>Comparar Hash MD5</h1>
-        <textarea id="hashmd5-input" rows="4" cols="50"></textarea>
-        <label id="compare-button"><h2>Comparar Hash MD5</h2></label>
+        <h1>Códigos Colores HEX y RGB</h1>
+        <input type="color" id="color-input" value="#FF0000" />
+        <p id="hexCode">Hex: #FF0000</p>
+        <p id="rgbCode">RGB: rgb(255, 0, 0)</p>
       </div>
       <div class="inicio item common-style">
         <label onclick="limpiar()" id="clean-button"
@@ -49,6 +40,6 @@
         >
       </div>
     </div>
-    <script src="../javascript/validadormd5.js"></script>
+    <script src="../javascript/coloreshexrgb.js"></script>
   </body>
 </html>
